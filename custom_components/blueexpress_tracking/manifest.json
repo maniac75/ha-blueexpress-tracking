@@ -6,9 +6,9 @@
   ],
   "config_flow": true,
   "documentation": "https://github.com/maniac75/ha-blueexpress-tracking",
-  "issue_tracker": "https://github.com/maniac75/ha-blueexpress-tracking/issues",
   "integration_type": "service",
   "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/maniac75/ha-blueexpress-tracking/issues",
   "requirements": [],
   "version": "0.1.0"
 }
