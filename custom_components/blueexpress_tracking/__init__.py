@@ -2,14 +2,27 @@
 
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import Platform
-from homeassistant.core import HomeAssistant
+from homeassistant.core import HomeAssistant, CoreState, EVENT_HOMEASSISTANT_STARTED
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
 
 from .api import BlueExpressClient
 from .const import CONF_TRACKING_NUMBER
 from .coordinator import BlueExpressCoordinator
+from .frontend import async_register_card
 
 PLATFORMS: list[Platform] = [Platform.SENSOR]
+
+
+async def async_setup(hass: HomeAssistant, config: dict) -> bool:
+    """Register optional card asset once, without adding cards to dashboards."""
+    async def register(_event=None) -> None:
+        await async_register_card(hass)
+
+    if hass.state == CoreState.running:
+        await register()
+    else:
+        hass.bus.async_listen_once(EVENT_HOMEASSISTANT_STARTED, register)
+    return True
 
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:

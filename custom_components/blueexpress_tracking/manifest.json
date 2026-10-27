@@ -5,10 +5,15 @@
     "@maniac75"
   ],
   "config_flow": true,
+  "dependencies": [
+    "frontend",
+    "http",
+    "lovelace"
+  ],
   "documentation": "https://github.com/maniac75/ha-blueexpress-tracking",
   "integration_type": "service",
   "iot_class": "cloud_polling",
   "issue_tracker": "https://github.com/maniac75/ha-blueexpress-tracking/issues",
   "requirements": [],
-  "version": "0.1.0"
+  "version": "0.2.0"
 }

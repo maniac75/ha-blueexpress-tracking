@@ -77,3 +77,28 @@ Se ejecutan además Hassfest y HACS Action en GitHub Actions. Las pruebas unitar
 Proyecto comunitario de **Gonzalo Umaña** (`@maniac75`). Código MIT.
 
 Este repositorio **no incluye** números de seguimiento reales, configuraciones privadas, credenciales ni dashboards personales.
+
+## Tarjeta opcional incluida desde v0.2.0
+
+La integración incluye una tarjeta visual compacta **Blue Express Tracking** para
+cada paquete. No requiere Parcel, 17TRACK, otro repositorio HACS ni llamadas al
+rastreador desde el navegador: lee únicamente el sensor de Home Assistant.
+
+Después de actualizar desde HACS y reiniciar Home Assistant:
+1. Agrega un número de seguimiento mediante la integración.
+2. Edita tu dashboard y elige **Agregar tarjeta → Blue Express Tracking**.
+3. Selecciona el sensor correspondiente en el editor; el título es opcional.
+
+La tarjeta muestra estado, fecha máxima *publicada por el transportista*
+(no garantiza entrega), último evento y un historial desplegable sin eventos
+internos vacíos. Respeta modo oscuro y pantallas móviles. No se añade
+automáticamente a ningún dashboard existente.
+
+El recurso JavaScript se registra automáticamente en Lovelace en modo
+almacenamiento. Con `lovelace: resource_mode: yaml`, agrega manualmente
+esta URL como recurso de tipo JavaScript module:
+
+`/blueexpress_tracking/blueexpress-tracking-card.js`
+
+Si Home Assistant indica que no encuentra la tarjeta, recarga la página,
+comprueba los recursos del dashboard y limpia la caché de la aplicación.
