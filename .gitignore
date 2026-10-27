@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.DS_Store
+*.log
+*.jsonl
+secrets.yaml
+.env
+.env.*
+*.tar.gz
+*.zip
+*.sqlite
+*.db
+ip_bans.yaml
+core.config_entries
+*cache*.json

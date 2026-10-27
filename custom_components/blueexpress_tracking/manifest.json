@@ -1,0 +1,14 @@
+{
+  "domain": "blueexpress_tracking",
+  "name": "Blue Express Tracking (Unofficial)",
+  "codeowners": [
+    "@maniac75"
+  ],
+  "config_flow": true,
+  "documentation": "https://github.com/maniac75/ha-blueexpress-tracking",
+  "issue_tracker": "https://github.com/maniac75/ha-blueexpress-tracking/issues",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "requirements": [],
+  "version": "0.1.0"
+}

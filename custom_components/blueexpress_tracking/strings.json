@@ -1,0 +1,29 @@
+{
+  "title": "Blue Express Tracking",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Add a shipment",
+        "description": "Use an 8–10 digit Blue Express tracking number. No account or API key is required.",
+        "data": {
+          "tracking_number": "Tracking number",
+          "label": "Shipment label (optional)"
+        }
+      }
+    },
+    "error": {
+      "invalid_tracking": "Enter a valid 8–10 digit tracking number.",
+      "invalid_label": "The label must be at most 64 characters."
+    },
+    "abort": {
+      "already_configured": "This shipment is already being tracked."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "status": {
+        "name": "Status"
+      }
+    }
+  }
+}

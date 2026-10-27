@@ -1,0 +1,29 @@
+{
+  "title": "Seguimiento Blue Express",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Agregar un envío",
+        "description": "Ingresa el número de seguimiento de Blue Express (8 a 10 dígitos). No se necesita cuenta ni clave de API.",
+        "data": {
+          "tracking_number": "Número de seguimiento",
+          "label": "Nombre del paquete (opcional)"
+        }
+      }
+    },
+    "error": {
+      "invalid_tracking": "Ingresa un número válido de 8 a 10 dígitos.",
+      "invalid_label": "El nombre puede tener como máximo 64 caracteres."
+    },
+    "abort": {
+      "already_configured": "Este envío ya está siendo rastreado."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "status": {
+        "name": "Estado"
+      }
+    }
+  }
+}
